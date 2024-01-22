@@ -13,7 +13,7 @@ UI a erişmek için servis type ı NodePort yapalım.
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
 ```
 
-UI passwordu için secret e bakacağız.
+UI passwordu için secret e bakacağız..
 
 ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
